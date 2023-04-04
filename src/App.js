@@ -3,7 +3,6 @@ import './App.css';
 import Home from './component/Home/Home.js';
 import React from 'react';
 import TourDetails from './component/TourDetails/TourDetails';
-// import Tours from './component/Tours/tour/Tour';
 const toursData = require("./data/data.json");
 
 
