@@ -1,19 +1,15 @@
 import './Header.css';
+import Navbar from '../Navbar/Navbar'
+import React from "react";
 
 
 function Header(){
     return(
-        <div class="header">
-           
-        <h1>Travel Destination</h1>
-        <input class="input" type='text' placeholder='search .......'></input>
-        <ul>
-                <li><a href="">Home</a></li>
-                <li><a href='../Footer/Footer'>Contact</a></li>
-                <li><a href="">More...</a></li>
-               
+        <div className="header">
+            <h1>Travel Destination</h1>
+            <input class="input" type='text' placeholder='search .......'></input>
 
-            </ul>
+            <Navbar />
         </div>
         
     );

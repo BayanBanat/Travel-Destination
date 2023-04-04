@@ -1,24 +1,25 @@
-import Header from "../Header/Header.js";
-import Tours from "../Tours/Tours.js";
-import Footer from "../Footer/Footer.js";
-
 import './Home.css';
 
 function Home(props) {
-    const dataRecieved=props.data;
+    const dataRecieved = props.data;
+
+    const [currentTourId, setCurrentTourId] = React.useState(null);
+    const handleTourClick = (tourId) => {
+        setCurrentTourId(tourId);
+      };
+
     return (
         <>
             <Header />
-            <div class="container">
-                {
-                    dataRecieved.map(tours => {
-                        return (
-                            <Tours toursName={tours.name} image={tours.image} />
-                        )
 
-                    })
-                }
+            <div className="tour-list">
+                {dataRecieved.map((tour) => (
+                    <Tour key={tour.id} tour={tour} onClick={handleTourClick} />
+                ))}
             </div>
+            {currentTourId && (
+                <TourDetail tour={dataRecieved.find((tour) => tour.id === currentTourId)} />
+            )}
 
 
             <Footer />

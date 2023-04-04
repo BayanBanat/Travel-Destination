@@ -1,16 +1,36 @@
 import './Tours.css';
-function Tours(props){
-    return(
-        <div id="tours">
-           <a href=''>
-           <h2>{props.toursName}</h2>
-            <img  id='img' src={props.image}   alt={props.toursName} />
-            </a> 
-            
-           
-            
-        </div>
+// import Tour from './Tour';
+import { Link } from 'react-router-dom';
 
-    )
-}
-export default Tours;
+// import React from "react";
+import Tour from "./tour/Tour";
+import React, { useState } from "react";
+import TourDetails from '../TourDetails/TourDetails';
+
+const Tours = ({ tours }) => {
+  const [selectedTour, setSelectedTour] = useState(null);
+
+  const handleClick = (tour) => {
+    setSelectedTour(tour);
+  };
+  
+  return (
+    <div className='container'>
+    
+      {tours.map((tour) => (
+
+<Link to={`/city/${tour.id}`}>
+<Tour tour={tour} onClick={() => handleClick(tour)} />
+</Link>
+         
+            //  <Tour tour={tour} onClick={() => handleClick(tour)}/>
+
+       
+       
+      ))}
+      {selectedTour && <TourDetails tour={selectedTour} />}
+    </div>
+  );
+};
+
+export default Tours;  

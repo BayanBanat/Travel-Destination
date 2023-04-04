@@ -1,8 +1,9 @@
 import './Footer.css'
+import React from "react";
 function Footer(){
     return(
-        <div class="footer">
-        <section class="socialMedia" id="social">
+        <div className="footer">
+        <section className="socialMedia" id="social">
              <a href=''> <i class="fa-brands fa-facebook"></i></a>
             <a href=''><i class="fa-brands fa-whatsapp"></i></a>
             <a href=''> <i class="fa-solid fa-phone"></i></a>

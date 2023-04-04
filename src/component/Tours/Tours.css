@@ -17,3 +17,7 @@ h2{
 * {
     font-family: 'Shantell Sans', cursive;
 }
+.container{
+    display: flex;
+    /* flex-direction: row; */
+}
