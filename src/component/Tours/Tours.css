@@ -7,6 +7,7 @@ h2{
     font-size: 1.7rem;
     /* background-color: rgb(254, 131, 131,0.5); */
     color: #e8d1d1;
+    margin-left: 20px;
 }
 #tours{
     background-color: rgba(10, 34, 43, 0.7);

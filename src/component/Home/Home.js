@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import TourDetail from '../TourDetails/TourDetails';
 import Footer from '../Footer/Footer'
 import React from 'react';
+import Tours from '../Tours/Tours';
 
 
 function Home(props) {
@@ -21,11 +22,11 @@ function Home(props) {
 
             <div className="tour-list">
                 {dataRecieved.map((tour) => (
-                    <Tour key={tour.id} tour={tour} onClick={handleTourClick} />
+                    <Tours key={tour.id} toury={tour} onClick={handleTourClick} />
                 ))}
             </div>
             {currentTourId && (
-                <TourDetail tour={dataRecieved.find((tour) => tour.id === currentTourId)} />
+                <TourDetail tour={dataRecieved.find((tour) => tour.id === currentTourId)} dataDetails={dataRecieved}/>
             )}
 
 

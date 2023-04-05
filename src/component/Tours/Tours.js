@@ -1,13 +1,11 @@
 import './Tours.css';
-// import Tour from './Tour';
 import { Link } from 'react-router-dom';
-
-// import React from "react";
 import Tour from "./tour/Tour";
 import React, { useState } from "react";
 import TourDetails from '../TourDetails/TourDetails';
 
-const Tours = ({ tours }) => {
+const Tours = (props) => {
+  let s=props.toury
   const [selectedTour, setSelectedTour] = useState(null);
 
   const handleClick = (tour) => {
@@ -17,17 +15,11 @@ const Tours = ({ tours }) => {
   return (
     <div className='container'>
     
-      {tours.map((tour) => (
 
-<Link to={`/city/${tour.id}`}>
-<Tour tour={tour} onClick={() => handleClick(tour)} />
-</Link>
-         
-            //  <Tour tour={tour} onClick={() => handleClick(tour)}/>
 
-       
-       
-      ))}
+<Tour touring={s}  />
+
+    
       {selectedTour && <TourDetails tour={selectedTour} />}
     </div>
   );
