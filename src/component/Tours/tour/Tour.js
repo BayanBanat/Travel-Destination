@@ -1,32 +1,16 @@
-
-
-import { Link } from "react-router-dom";
-import './Tour.css';
-import TourDetails from "../../TourDetails/TourDetails";
-import React, { useState } from "react";
-
+import './Tour.css'
 const Tour = ( props ) => {
+  // let {img,name}=props
 
-
-  const { id,name, image,info } = props.touring;
-  const [showDetails, setShowDetails] = useState(false);
-
-  const handleClick = () => {
-    setShowDetails(!showDetails);
-  };
+ 
   return (
     <>
-
-    <Link to={`/city/${id}`}>
     <div className="card" >
-      <img src={image} alt={name} />
-      <div className="card-info">
-        <h4>{name}</h4>
-      </div>
-      {showDetails && <TourDetails details={props.touring} />}
-      <button onClick={handleClick}>View Details</button>
+    <h4>{props.name}</h4>
+      <img className='img1' src={props.image} alt={props.name} />
+        
     </div>
-    </Link>
+  
     </>
     
   );

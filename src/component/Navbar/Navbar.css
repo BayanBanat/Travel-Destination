@@ -1,4 +1,9 @@
 nav{
-    margin:20px 40px;
+    display: flex;
+    justify-content: space-between;
+    margin:0 40px;
     font-size: 30px;
+}
+h1{
+    color: #000;
 }

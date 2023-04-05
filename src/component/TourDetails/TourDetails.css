@@ -1,0 +1,14 @@
+.div{
+    margin-left: 40px;
+    background-color: rgba(82, 83, 83, 0.8);
+    width: 800px;
+    
+}
+img{
+    width:800px;
+    height: 500px;
+}
+h3{
+    font-size: 70px;
+    color: rgb(255, 228, 196);
+}

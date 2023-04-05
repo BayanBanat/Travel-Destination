@@ -1,5 +1,5 @@
-img{
-    width: 420px;
+.img1{
+    width: 500px;
     height: 350px;
     border-radius: 10px;
  }
@@ -19,8 +19,8 @@ img{
      font-family: 'Shantell Sans', cursive;
  }
  .card{
-    background-color: rgb(68, 69, 69);
-    width: 420px;
+    background-color: rgb(68, 69, 69,0.7);
+    width: 500px;
     /* justify-content: center; */
     
  }

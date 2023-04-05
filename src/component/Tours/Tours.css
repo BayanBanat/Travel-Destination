@@ -1,24 +1,33 @@
-#img{
-   width: 400px;
-   height: 350px;
-   border-radius: 10px;
-}
-h2{
-    font-size: 1.7rem;
-    /* background-color: rgb(254, 131, 131,0.5); */
-    color: #e8d1d1;
-    margin-left: 20px;
-}
-#tours{
-    background-color: rgba(10, 34, 43, 0.7);
-    text-align: center;
-    border-radius: 20px;
-    box-shadow: 7px 0px rgb(66, 65, 65,0.7);
-}
-* {
-    font-family: 'Shantell Sans', cursive;
-}
-.container{
+
+
+img{
+    width: 42px;
+    height: 350px;
+    border-radius: 10px;
+ }
+ h1{
+     font-size: 3rem;
+     color: #e8d1d1;
+     text-align: center;
+ }
+ #tours{
+     background-color: rgba(10, 34, 43, 0.7);
+     text-align: center;
+     border-radius: 20px;
+     box-shadow: 7px 0px rgb(66, 65, 65,0.7);
+ }
+ * {
+     font-family: 'Shantell Sans', cursive;
+ }
+ .cardParent{
     display: flex;
-    /* flex-direction: row; */
-}
+    flex-wrap: wrap;
+    /* background-color: rgb(68, 69, 69); */
+    /* width: 500px; */
+    justify-content: space-around;
+    /* gap: 20px; */
+    
+ }
+ .card{
+    width: 500px;
+ }

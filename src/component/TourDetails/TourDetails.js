@@ -1,26 +1,52 @@
-import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import './TourDetails.css'
 
-const TourDetails = (props) => {
-  const { id } = useParams();
-  const { name,image, info } = props.details;
+
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+const dataDetails = require('../../data/data.json')
+
+const TourDetails = () => {
+  let { id } = useParams();
+  console.log(id);
 
   const [showMore, setShowMore] = useState(false);
 
-  const toggleDescription = () => {
-    setShowMore(!showMore);
-  };
-
   return (
-      <div className="tour-details">
-        <p>{showMore ? info : info.slice(0, 150)}</p>
-        <button onClick={toggleDescription}>
-          {showMore ? "Show less" : "Show more"}
-        </button>
-      </div>
+    <>
+      {
+        dataDetails.map(details => {
+          if (details.id === id) {
+            return (
+              <div className="div">
+                <h3>{details.name}</h3>
+                <img src={details.image} />
+                <p>{details.price}</p>
+                <div>
+                  {showMore ? (
+                    <>
+                      <p>{details.info}</p>
+                      <button onClick={() => setShowMore(false)}>show less</button>
+                    </>
+                  ) : (
+                    <>
+                      <p>{details.info.slice(0, 150)}</p>
+                      <button onClick={() => setShowMore(true)}>show More</button>
+                    </>
+                  )}
+                </div>
 
-  );
-};
+              </div>
+            )
+          }
+        })
+      }
+  
 
-export default TourDetails
+    </>
+
+
+  )
+}
+
+export default TourDetails;
 
