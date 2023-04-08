@@ -5,7 +5,6 @@ const Navbar =()=>{
     return(
         <nav>
              <h1>Travel Destination</h1>
-             {/* <input class="input" type='text' placeholder='search .......'></input> */}
             <Link to="/">Home</Link>
         </nav>
     )
