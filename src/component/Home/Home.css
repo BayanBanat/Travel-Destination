@@ -1,0 +1,12 @@
+.tour-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin : 20px 0 0 20px;
+    gap: 80px;
+    border-bottom:1px solid rgb(102, 96, 96) ;
+
+    
+}
+* {
+    font-family: 'Shantell Sans', cursive;
+}
