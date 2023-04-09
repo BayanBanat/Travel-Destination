@@ -7,7 +7,6 @@ const dataDetails = require('../../data/data.json')
 
 const TourDetails = () => {
   let { id } = useParams();
-  console.log(id);
 
   const [showMore, setShowMore] = useState(false);
 

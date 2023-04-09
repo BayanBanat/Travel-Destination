@@ -14,6 +14,8 @@ function Home(props) {
             <Header />
 
             <Tours data={props.data} />
+
+            <Footer/>
            
 
 
